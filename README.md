@@ -108,6 +108,11 @@ Then visit `http://localhost:5173` (default Vite port) in your browser.
 - Keep the Favorites panel in view on desktop by scrolling near the right column.
 - Toggle the moon/sun icon in the header to double-check dark mode styles.
 
+## Configuration 🧩
+- Copy `.env.example` to `.env` (or create a new `.env` file) and set `VITE_API_BASE_URL` to the API host you want to query.
+- When the variable is not defined, the client automatically falls back to `https://api.jikan.moe/v4`, but updating the URL lets you point to proxies or mocks without touching the repo.
+- `.env` files are ignored by `.gitignore`, so each developer can keep their URL private or specific to the environment.
+
 ## Scripts 📜
 ```bash
 npm run dev        # Start development server

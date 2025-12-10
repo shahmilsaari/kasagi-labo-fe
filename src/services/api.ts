@@ -1,7 +1,9 @@
 import axios, { AxiosError } from 'axios';
 import type { AnimeResponse, GenreResponse, AnimeDetailResponse, ReviewsResponse } from '@/types/anime';
 
-const API_BASE_URL = 'https://api.jikan.moe/v4';
+const DEFAULT_API_BASE_URL = 'https://api.jikan.moe/v4';
+const configuredApiUrl = import.meta.env.VITE_API_BASE_URL?.trim();
+const API_BASE_URL = configuredApiUrl || DEFAULT_API_BASE_URL;
 
 // Jikan API has rate limiting (3 requests/second, 60 requests/minute)
 // Implement simple request queue to avoid hitting rate limits
