@@ -1,0 +1,1 @@
+export { PopularAnime } from './PopularAnime';
